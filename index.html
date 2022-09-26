@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <title>Forms in javascript</title>
+</head>
+<body>
+    
+<main>
+    <!--  Keep in mind that this is the contact sheet used in the accessibility assignment so it has some accessibility things in it  -->
+
+
+<form> <!--The form is the gray box holding all the things inside that are on the page-->
+    <h1>Contact us</h1>
+    <br>
+    <p id="p1">Please fill out the following fields</p>
+    <p id="p2">Required fields are marked with *</p>
+
+    <div>
+        <label for="full-name">Full name *</label> <!--  Here below you can see minlength that is required, at least Chrome will let you know if there are too few letters in the name  -->
+        <input type="text" name="Name" id="full-name" minlength="2" aria-label="Write your full name. This is a required field"> <!--Aria label is used for text to speech accessibility. The voice reads the aria labels. Good to have for input fields so the computer reads what you should do-->
+         <i class="fas fa-exclamation-circle failure-icon" ></i> <!--  Here are Icons from font awesome that are marked as success or failure  -->
+        <i class="far fa-check-circle success-icon"></i> 
+
+    </div>
+
+    <div>
+        <label for="email">Email *</label>
+        <input type="text" name="Email" id="email" aria-label="Write your email address. This is a required field">
+        <i class="fas fa-exclamation-circle failure-icon"></i>
+        <i class="far fa-check-circle success-icon"></i>
+
+    </div>
+
+    <div>
+        <label for="title">Title</label>
+        <input for="title" name="title" id="title" aria-label="Write the title" > <!-- No Icons here because it's not a required field -->
+    </div>
+
+    <div>
+        <label for="subject">Subject *</label>
+        <textarea for="subject" name="subject" id="subject" minlength="10" aria-label="Write the subject. This is a required field"></textarea>
+        <i class="fas fa-exclamation-circle failure-icon" ></i>
+        <i class="far fa-check-circle success-icon"></i>
+    </div>
+
+<!-- If I would have a password field I could put type="password so the browser would understand that this is a password input" -->
+ 
+
+
+    <button type="submit" id="sendbtn" aria-label="Send">Send</button>  
+
+    <div id="modalwindow"> <!--  This window opens all over the screen  -->
+        <div class="modal-content"> <!--  This is for the little box inside the window  -->
+            <h2>Thank you for contacting us!</h2> <!--For best accessibility you should go from 1 and up (h1, h2...) and dont skip a number inbetween-->
+            <p id="p3">We will get in touch with you shortly</p>
+            <img src="photo.jpg" alt="A happy little dog wearing a pink party hat" aria-label="A happy little dog wearing a pink party hat">
+        </div>
+    </div>
+</form>
+</main> 
+
+
+
+<script src="./main.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+}
+
+#p1 {
+    font-size: larger;
+}
+
+
+#p2 {
+    font-size: small;
+    margin-bottom: 40px;
+}
+
+
+input { /*  Styles for the input fields on the sheet */
+    margin-bottom: 20px;
+    width: 70%;
+    line-height:120%;
+    padding:4px 10px;
+    font-size: 16px;
+    border: 1px black groove;
+}
+
+/*This appears when the input is invalid*/
+input:invalid {
+  border: 1px solid rgb(255, 59, 59);
+}
+
+/*This makes the labels to be above the inputfields, I put it only on the lables because if it goes on the input aswell the icons would appear below*/
+label {
+    display: block;
+
+}
+
+/*  Styles on the form itself  */
+form{
+    background-color:rgb(242, 242, 242);
+    margin-left: 15%;
+    margin-right:15%;
+    margin-top: 2%;
+    margin-bottom: 3%;
+    padding: 4%;  
+    box-shadow: 3px 3px 5px 6px #ccc;
+}
+
+/*  making the subject inputfield bigger than the others  */
+#subject {
+   width: 70%;
+   padding:15px 10px;
+   height: 50%;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-size: 16px;
+   border: 1px black solid;
+   margin-bottom: 20px;
+}
+
+
+/* Icons - error and succsess */
+i {
+    position: relative; 
+    align-items: right;
+    align-items: right;
+    display: inline;
+
+}
+.failure-icon,
+.error {
+  color: red;
+}
+
+.success-icon {
+  color: green;
+}
+
+.error {
+  font-size: 14.5px;
+  margin-top: 5px;
+}
+
+.success-icon,
+.failure-icon {
+  right: 0;
+  opacity: 0;
+}
+
+
+button {
+    border-radius: 4px;
+    padding: 8px;
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-size: 24px;
+    width: 150px;
+    margin-bottom: 50px;
+    border: 1px black groove;
+}
+
+
+/*  Hovereffect on button  */  
+  button:hover{
+    color: #ffffff;
+    border: #ffffff solid 1px;
+    background:rgb(0, 0, 0);
+  }
+ 
+
+/* This is the image within the modal content */
+ img{
+    width: 70%;
+    height: auto;
+    display: block;
+    justify-items: center;
+    margin: auto;
+ } 
+  
+
+
+/*  this makes the hover state when you press tab so you can see what you've selected  */
+:focus {
+    outline: 1px solid #2E1BA6;
+    border-color: transparent;
+  }
+
+
+
+/* This is the modal window that appears on successful send */
+/*This is the one that fills out all the page at success*/
+  #modalwindow {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: rgba(244, 237, 237, 0.7);
+    display: none;
+  }
+  /*This is the box within the modalwindow*/
+  .modal-content {
+    background-color: white;
+    text-align: center;
+    padding-bottom: 120px;
+    padding-top: 40px;
+    top: 50px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    box-shadow: 3px 3px 13px 6px #ccc;
+  }
+
+
+
+
